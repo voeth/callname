@@ -4,7 +4,6 @@ body {
 	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #FF6260;
 	background-size: 110px 200px;
 	background-repeat: repeat-x;
-	
 }
 a {
   text-decoration:  none; 
@@ -21,13 +20,7 @@ h2 {
 }
 
 form{
-  border-style:dashed;
-  border-color::#ffae01;
-  margin-top:10%;
-  margin-bottom:35%;
-  right:35%;
-  left:30%;
-  padding:auto;
+
 }
 
 /**调整按钮**/
