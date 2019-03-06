@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 align="center" style="color:#ffae01">{{ the_title }} </h1>
+<table align="center" style="vertical-align:middle">
+<h2 align="center">返回结果：</h2>
+    <tr>
+        {% for row_title in the_row_titles %}
+            <th>{{ row_title }}</th>
+        {% endfor %}
+    </tr>
+         <tr>
+             {% for item in the_results%}
+                 <td st>{{ item }}</td>
+             {% endfor %}
+         </tr>
+</table>
+{% endblock %}
+            

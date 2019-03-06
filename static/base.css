@@ -1,0 +1,89 @@
+body {
+	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #FF6260;
+	background-size: 110px 200px;
+	background-repeat: repeat-x;
+	
+}
+a {
+  text-decoration:  none; 
+  font-weight:      600; 
+}
+a:hover {
+  text-decoration:  underline;
+}
+a img {
+  border:           0;
+}
+h2 {
+  font-size:        150%;
+}
+
+form{
+  border-style:dashed;
+  border-color::#ffae01;
+  margin-top:10%;
+  margin-bottom:35%;
+  right:35%;
+  left:30%;
+  padding:auto;
+}
+
+img{
+  margin-top:5em;
+  margin-bottom:35em;
+  margin-right:50%;
+  margin-left:40%;
+  padding:auto;
+  max-width:100%
+}
+
+table {
+  margin:auto;
+  caption-side:     bottom;
+  border-collapse:  collapse; 
+      
+}
+td, th {
+  padding:          5px;
+  text-align:       left;
+}
+.copyright {
+  font-size:        75%;
+  font-style:       italic;
+}
+.slogan {
+  font-size:        75%;
+  font-style:       italic;
+}
+.confirmentry {
+  font-weight:      600; 
+}
+
+/*** Tables ***/
+
+table {
+font-size:          1em;
+background-color:   #fafcff;
+border:             1px solid #909090;
+color:              #2a2a2a;
+padding:            5px 5px 2px;
+border-collapse:    collapse;
+}
+
+td, th {
+border:             thin dotted gray;
+}
+
+/*** Inputs ***/
+input[type=text] {
+  font-size:        115%;
+  width:            30em;
+}
+input[type=submit] {
+  font-size:        125%;
+}
+select {
+  font-size:        125%;
+}
