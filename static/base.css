@@ -30,13 +30,23 @@ form{
   padding:auto;
 }
 
-img{
-  margin-top:5em;
-  margin-bottom:35em;
-  margin-right:50%;
+/**调整按钮**/
+@media(max-width:1024px){
+	.the_button{
+		margin-left:-45%/**同样方位的外边距，父级为正，子级为负的数值可以实现相对整齐排列**/
+	}
+}
+
+.the_button{
+	margin-left:-68%
+}
+
+/**父级容器**/
+.contain{
+  margin-top:10em;
   margin-left:40%;
   padding:auto;
-  max-width:100%
+  max-width:100%;
 }
 
 table {

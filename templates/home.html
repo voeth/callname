@@ -4,7 +4,16 @@
 
 <h1 align="center" style="color:#ffae01">{{ the_title }}</h1>
 <body>
-	<img src='\static\home.jpg' >
+	<div class='contain'>
+		<img src='\static\home.jpg''>
+		<br>
+		<br>
+	<!--左右两边外边距的挤压，加上排列方式对立都会造成按钮里的字体折行-->
+    <div class=the_button style="display:flex;justify-content:center;">
+		<a href="/callname"><button style="font-size:1.2em;padding:15px;">欢乐摇号</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/history"><button style="font-size:1.2em;padding:15px;">查看点名册</button></a>
+	</div>
+	</div>
 </body>
 
 
