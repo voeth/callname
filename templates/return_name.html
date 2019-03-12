@@ -2,11 +2,14 @@
 {% block body %}
 <div class='contain'>
     <img src='\static\name.jpg' style='max-width:100%;margin-left:-25%'>
-    <p style="font-size:160%">幸运儿是：<b style='font-size:120%'>{{ the_students }}</b></p>
+    <p style="font-size:160%;">幸运儿是：<b style='font-size:120%'>{{ the_students }}</b></p>
+    <div style='display:flex;justify-content:center;margin-left:-50%'>
     <form action='/callname' method='post'>
-        <input value='摇号' type="submit" style="padding:10px">
+        <input type='radio' name='times' value='am' required='required'>上午&nbsp;&nbsp;&nbsp;<input type='radio' name='times' value='night'>晚上&nbsp;&nbsp;&nbsp;<input value='摇号' type="submit" style="padding:10px">
     </form>
-    <a href=''>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href='/'><button style='font-size:1.2em;padding:10px;'>返回首页</button></a>
+    </div>
 </div>
 {% endblock %}
             
