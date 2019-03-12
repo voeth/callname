@@ -42,12 +42,15 @@ def return_result()->'html':
         elif request.form['times'] == 'night':
             path = r'C:\Users\mr。lang\Desktop\callname\static\night.csv'
         with open(path,encoding='utf8') as file:
-            index = 0
+            line=index = 0
             students = {}
             for n in file:
-                name = n.split(',')
-                index +=1
-                students[index] = name[1].strip('"\n')
+                line +=1 # 隐藏无用信息
+                if line>5:
+                    name = n.split(',')
+                    index +=1
+                    students[index] = name[1].strip('"\n')
+        students.pop(index) # 删除空值的键
         return render_template("return_name.html",
                    the_title=title,
                    the_students=students[randint(1,index)])

@@ -1,11 +1,36 @@
 {% extends 'base.html' %}
 {% block body %}
+<script>
+    /*注释部分为下拉菜单选择的功能*/
+    function selectRadio(){
+        //selectIndex = document.getElementById("times").selectedIndex;
+        //document.cookie = 'selectIndex =' + selectIndex;
+        radios = document.getElementsByName("times");
+        for (i = 0; i < radios.length; i++) {
+    if (radios[i].checked) document.cookie = 'radioindex =' + i;
+            }
+        }
+        window.onload = function () {
+            var cooki = document.cookie;
+            if (cooki != "") {
+                cooki = "{\"" + cooki + "\"}";
+                cooki = cooki.replace(/\s*/g, "").replace(/=/g, '":"').replace(/;/g, '","');
+                var json = eval("(" + cooki + ")"); //将coolies转成json对象
+                //document.getElementById("times").options[json.selectIndex].selected = true;
+                document.getElementsByName("times")[json.radioindex].checked = true;
+            }
+            else
+                selectRadio();
+  }
+</script>
+<h1 align="center" style="color:#ffae01">{{ the_title }}</h1>
 <div class='contain'>
     <img src='\static\name.jpg' style='max-width:100%;margin-left:-25%'>
     <p style="font-size:160%;">幸运儿是：<b style='font-size:120%'>{{ the_students }}</b></p>
     <div style='display:flex;justify-content:center;margin-left:-50%'>
-    <form action='/callname' method='post'>
-        <input type='radio' name='times' value='am' required='required'>上午&nbsp;&nbsp;&nbsp;<input type='radio' name='times' value='night'>晚上&nbsp;&nbsp;&nbsp;<input value='摇号' type="submit" style="padding:10px">
+    <form action='/callname' method='post' id="times">
+        <input type='radio' name='times' value='am' required='required' checked id='am' onclick='selectRadio()'><span>上午</span>&nbsp;&nbsp;&nbsp;
+        <input type='radio' name='times' value='night' id='night' onclick='selectRadio()'><span>晚上</span>&nbsp;&nbsp;&nbsp;<input value='摇号' type="submit" style="padding:10px">
     </form>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href='/'><button style='font-size:1.2em;padding:10px;'>返回首页</button></a>
